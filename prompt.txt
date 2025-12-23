@@ -74,7 +74,19 @@ WHERE toLower(d.name) = 'belimumab'
 RETURN t.PostingID AS trial_id, t.StudyTitle AS title, t.Sponsor AS sponsor, t.Phase AS phase
 ```
 
-### Example 5: Find trials by sponsor
+### Example 5: Find trials by disorder
+**Question:** What trials focus on Depressive Disorder?
+
+**Cypher:**
+```cypher
+MATCH (t:Trial)
+WHERE t.Disorder =~ 'Depressive Disorder'
+RETURN t.PostingID AS trial_id, t.StudyTitle AS title, t.Phase AS phase
+LIMIT 10
+```
+
+
+### Example 5.1: Find trials by disorder
 **Question:** What trials is GSK sponsoring?
 
 **Cypher:**
