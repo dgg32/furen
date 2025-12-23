@@ -86,7 +86,7 @@ LIMIT 10
 ```
 
 
-### Example 5.1: Find trials by disorder
+### Example 5.1: Find trials by sponsor
 **Question:** What trials is GSK sponsoring?
 
 **Cypher:**
